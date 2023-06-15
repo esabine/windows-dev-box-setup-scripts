@@ -54,9 +54,9 @@ Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\
 # remove task view button
 Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name ShowTaskViewButton -Value 0 -Type DWord -Force
 
+# install the AD part of RSAT
+Get-WindowsCapability -name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0 -Online | Add-WindowsCapability -Online 
 
-
-choco install rsat -y
 choco install powerbi -y
 choco install sql-server-management-studio -y
 choco install windirstat -y
@@ -72,7 +72,7 @@ choco install winmerge -y
 choco install tortoisegit -y
 
 
-
+install-module -name dbatools
 
 
 <#
