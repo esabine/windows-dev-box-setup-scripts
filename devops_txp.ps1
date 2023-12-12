@@ -55,6 +55,11 @@ install-module -name dbatools -Repository PSGallery
 <# ---------------------------------- #>
 
 
+<# --------- WinGet Installs -------- #>
+<# ---------------------------------- #>
+winget install JanDeDobbeleer.OhMyPosh
+<# ---------------------------------- #>
+
 
 <# ----- Chocolatey Installs -------- #>
 <# ---------------------------------- #>
@@ -62,11 +67,11 @@ choco install -y powershell-core
 choco install -y azure-cli
 choco install -y microsoftazurestorageexplorer
 choco install powerbi -y
-choco install sql-server-management-studio -y
+choco upgrade sql-server-management-studio -y
 choco install windirstat -y
 choco install paint.net -y
 choco install adobereader -y
-choco install github-desktop -y
+choco upgrade github-desktop -y
 choco install insomnia-rest-api-client -y
 choco install microsoftazurestorageexplorer -y
 choco install notepadplusplus -y
